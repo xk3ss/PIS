@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Курсы повышения квалификации</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/article.css">
+</head>
+<body class="archive">
+    <div class="header">
+        <img src="{{ STATIC_URL }}img/logo.png" alt="Курсы повышения квалификации">
+    </div>
+    <div class="content">
+        {% for lesson in lessons %}
+        <div class="one-post">
+            <h2 class="post-title">{{ lesson.subject.name }} — {{ lesson.lesson_type.name }}</h2>
+            <div class="article-info">
+                <div class="article-author">{{ lesson.teacher }}</div>
+                <div class="article-created-date">{{ lesson.created_date }}</div>
+            </div>
+            <p class="article-text">
+                Группа: {{ lesson.group.name }}.
+                Часов: {{ lesson.hours }}.
+                Оплата за час: {{ lesson.rate_per_hour }}.
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
