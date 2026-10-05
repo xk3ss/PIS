@@ -28,7 +28,6 @@ def create_post(request):
             form['errors'] = "Не все поля заполнены"
             return render(request, 'create_post.html', {'form': form})
 
-        # Проверка уникальности названия статьи (задание)
         if Article.objects.filter(title=form['title']).exists():
             form['errors'] = "Статья с таким названием уже существует"
             return render(request, 'create_post.html', {'form': form})
@@ -40,5 +39,4 @@ def create_post(request):
         )
         return redirect('get_article', article_id=article.id)
 
-    # GET — просто показать форму
     return render(request, 'create_post.html', {})
