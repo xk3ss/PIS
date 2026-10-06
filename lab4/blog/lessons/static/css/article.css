@@ -29,6 +29,23 @@ body {
     margin-right: auto;
 }
 
+.header-links {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.header-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
 .post-title a {
     color: #ffffff;
     text-decoration: none;
@@ -81,53 +98,4 @@ body {
 .article h1 {
     font-size: 32px;
     margin-bottom: 5px;
-}
-
-form input:not([type="submit"]),
-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ffffff;
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-
-form textarea {
-    height: 200px;
-    resize: vertical;
-}
-
-form input[type="submit"] {
-    padding: 10px 20px;
-    background: #ffffff;
-    color: #1abc9c;
-    border: none;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-    color: #e0e0e0;
-}
-
-.header-links {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
-.header-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    margin-left: 15px;
-}
-
-.header-links a:hover {
-    text-decoration: underline;
 }
